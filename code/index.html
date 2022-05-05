@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器 */
+        .one p{
+            color: red;
+        }
+        /* 子代选择器 */
+        .two > p{
+            color: blue;
+        }
+        /* 并集选择器 */
+        .f40{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p>这是p标签</p>
+        <span>
+            这是span标签
+            <ul>
+                <li>
+                    <p>这个是不知道第几层p标签</p>
+                </li>
+                <li>
+                    <a href="#">这是a标签</a>
+                </li>
+            </ul>
+        </span>
+    </div>
+    <hr>
+    <div class="two">
+        <p>这是p标签</p>
+        <span>
+            这是span标签
+            <ul>
+                <li>
+                    <p>这个是不知道第几层p标签</p>
+                </li>
+                <li>
+                    <a href="#">这是a标签</a>
+                </li>
+            </ul>
+        </span>
+    </div>
+    <hr>
+    <div class="f40">123</div>
+    <span class="f40">456</span>
+</body>
+</html>

@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    color: pink;
+    font-size: 20px;
+}
+div{
+   line-height: 50px;
+}
+.div1{
+    color: red;
+    font-size: 18px;
+}
+#one{
+    color: red;
+    font-size: 24px;
+}
