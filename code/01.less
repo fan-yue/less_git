@@ -1,0 +1,16 @@
+// 这种注释，编译后不会出现在css样式表中
+/* 这种注释会出现 */
+@color:#999;
+@bgcolor:red;
+@width:50%;
+
+// 颜色模块
+@footer:red;
+@nav:yellow;
+@header:aqua;
+
+.one{
+    width: @width;
+    color: @color;
+    background-color: @bgcolor;
+}
