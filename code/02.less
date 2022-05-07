@@ -1,0 +1,74 @@
+
+@warp:warp;
+
+@{myselect}{    //变量名必须使用大括号包着
+    background-color: aqua;
+    width: 400px;
+    height: 20px;
+}
+
+.@{warp}{
+    width:400px;
+    height: 500px;
+    background-color: black;
+}
+// LESS
+    // 选择器变量
+@myselect:#warp;    
+    //属性变量
+@borderStyle:border-style;
+@soild:soild;
+
+@{myselect}{
+    @{borderStyle}:@soild;  //变量名必须用大括号包着
+}
+
+// url变量
+@image:"../../image";
+
+body{
+    background: url("@{image}/01.png");
+}
+
+// 声明变量
+@background:{
+    background: red;
+}
+@Rulse:{
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+}
+#warp{
+    @background();
+}
+#main{
+    @Rulse();
+}
+
+//  变量运算
+@width:300px;
+@color:#222;
+
+#warp{
+    width: @width - 20;
+    height: @width - 20*5;
+    margin: (@width - 20)*5;
+    color: @color * 2;
+    background-color:@color + #111;
+}
+
+// 变量作用域
+@var:@a;
+@a:100%;
+
+#warp{
+    width: @var;
+    @a:9%;
+}
+// 用变量去定义变量
+@fond:@va;
+@va:'fond';
+#warp::after{
+    content: @fond;
+}
