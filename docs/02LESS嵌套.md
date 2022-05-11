@@ -1,25 +1,20 @@
 ### & 的用处
 
-标签之间嵌套
+&用于找嵌套之间的父级关系
 
 `LESS`
 
 ```
-.center{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    & .list{
-        width: 50px;
-        height: 50px;
-        background-color: green;
-        li{
-            width: 30px;
-            height: 30px;
-            background-color: blue;
-            & a{
-                color: red;
-            }
+.box{
+    width: 400px;
+    height: 40px;
+    border: 1px solid black;
+    .a{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        &:hover{
+            background: greenyellow;
         }
     }
 }
@@ -28,23 +23,18 @@
 `CSS`
 
 ```
-.center {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+.box {
+  width: 400px;
+  height: 40px;
+  border: 1px solid black;
 }
-.center .list {
-  width: 50px;
-  height: 50px;
-  background-color: green;
+.box .a {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
 }
-.center .list li {
-  width: 30px;
-  height: 30px;
-  background-color: blue;
-}
-.center .list li a {
-  color: red;
+.box .a:hover {
+  background: greenyellow;
 }
 ```
 

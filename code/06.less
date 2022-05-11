@@ -1,0 +1,20 @@
+.triangle(L,@w,@color){
+    width: 0px;
+    height: 0px;
+    border-width: @w;
+    border-style: solid;
+    border-color: transparent @color transparent transparent;
+}
+.triangle(T,@w,@color){
+    width: 0px;
+    height: 0px;
+    border-width: @w;
+    border-style: solid;
+    border-color:@color transparent  transparent transparent;
+}
+.T_sjx{
+    .triangle(T, 10px, black);
+}
+.L_sjx{
+    .triangle(L, 10px,red);
+}

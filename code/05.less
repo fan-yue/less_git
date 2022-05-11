@@ -1,8 +1,19 @@
-.card(){
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
+@import url(./01.less);
+.public(@w:10px,@h:10px,@bc:red){
+    width: @w;
+    height: @h;
+    background-color: @bc;
 }
-#warp{
-    .card();
+
+.box{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    .a{
+        .public(100px,100px,pink);
+    }
+    .b{
+        // 注意这儿
+        .public();
+    }
 }

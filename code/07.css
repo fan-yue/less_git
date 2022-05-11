@@ -1,0 +1,22 @@
+.box {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+.a {
+  background-color: red;
+}
+nav {
+  background: blue;
+}
+.line,
+nav {
+  color: red;
+}
+#warp {
+  width: @width - 20;
+  height: 200px;
+  margin: 1400px;
+  color: #444444;
+  background-color: #333333;
+}
